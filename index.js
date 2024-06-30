@@ -123,8 +123,6 @@ function loadContent() {
     const routeMapping = {
         '/': () => home(),
         '/privacy': () => privacy(),
-        '': () => home()
-
     };
     window.scrollTo(0, 0);
 

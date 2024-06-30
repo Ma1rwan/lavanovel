@@ -122,7 +122,9 @@ function loadContent() {
     // Define mapping of routes to functions
     const routeMapping = {
         '/': () => home(),
-        '/privacy': () => privacy()
+        '/privacy': () => privacy(),
+        '': () => home()
+
     };
     window.scrollTo(0, 0);
 

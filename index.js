@@ -167,7 +167,9 @@ function loadContent() {
         notFound();
     }
     const toggleButton = document.getElementById("toggleButton");
+    const sidebarButton = document.getElementById("sidebarButton");
     toggleButton.addEventListener('click', theme);
+    sidebarButton.addEventListener('click', toggleSidebar);
 }
 
 // Function to fetch and set HTML content for Home page

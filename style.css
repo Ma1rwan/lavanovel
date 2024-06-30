@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap');
+body {
+    padding: 0px;
+    position: relative;
+    background-color: #181818;
+
+}
+
+.topbar img {
+    padding-left: 15px;
+    padding-top: 0; /* Remove negative padding */
+    float: left;
+    overflow: hidden;
+    display: block;
+    width: 70px;
+}
+
+.topbar .theme {
+    background-image: url(https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/main/white.png);
+    background-size: cover;
+    width: 37px; /* Adjust width as needed */
+    height: 37px; /* Adjust height as needed */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    background-color: transparent;
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+}
+
+.topbar .theme:hover {
+    background-color: #ffffff1a;
+}
+
+.topbar .theme:active {
+    transform: scale(0.95); /* Scale down the button slightly when clicked */
+}
+
+.topbar p {
+    padding-right: 20px;
+    padding-top: 4px;
+    font-family: 'Cairo', sans-serif;
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#search-box {
+    padding-left: 10px;
+    font-family: 'Cairo', sans-serif;
+    float: left;
+    width: 600px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-self: center;
+    font-size: medium;
+}
+
+.sidebar-toggle {
+    margin-top: 15px; /* Adjust the margin to align with other elements */
+    float: right;
+    display: none;
+}
+
+#sidebarButton {
+    background-color: #18181800;
+    border: #18181800;
+    font-size: 40px;
+    color: #fff;
+    margin-top: -10px;
+}
+.sidebar2 {
+    position: fixed;
+    top: 0px;
+    right: -250px; /* Hide sidebar by default */
+    width: 200px;
+    height: 100%;
+    background-color:  #181818;
+    color: #d48104;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    align-items: center;
+    border: #181818 1px solid;
+    border-left: #3f3f3f 2px solid;
+}
+.sidebar2 a {
+    text-decoration: none;
+}
+.sidebar2 p {
+    padding-right: 20px;
+    padding-top: 4px;
+    font-family: 'Cairo', sans-serif;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 5px 0px 5px 0px;
+    background-color:  #00000021;
+    font-size: larger;
+    border-top: #d48104 2px solid;
+}
+.sidebar2 p:hover {
+    transform: scale(1.02);
+    background-color:#ffffff11;
+    transition: transform 0.1s; /* Add a transition for the transform property */
+
+}
+.sidebar2.active {
+    right: 0; /* Show sidebar when active class is applied */
+}
+
+/* Other styles for your page */
+/* Add your styles here */
+@media screen and (max-width: 1120px) {
+    #search-box {
+        padding-left: 10px;
+        font-family: 'Cairo', sans-serif;
+        float: left;
+        width: auto;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        align-self: center;
+        font-size: medium;
+    }
+    .sidebar-toggle {
+        margin-top: 15px; /* Adjust the margin to align with other elements */
+        float: right;
+        display: block;
+    }
+    .topbar p {
+        padding-right: 20px;
+        padding-top: 4px;
+        font-family: 'Cairo', sans-serif;
+        float: right;
+        display: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 720px) {
+    #search-box {
+        padding-left: 10px;
+        font-family: 'Cairo', sans-serif;
+        float: left;
+        width: 80px;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        align-self: center;
+        font-size: medium;
+    }
+    .topbar .theme {
+        background-image: url(https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/main/white.png);
+        background-size: cover;
+        width: 37px; /* Adjust width as needed */
+        height: 37px; /* Adjust height as needed */
+        border: none; /* Remove default button border */
+        cursor: pointer;
+        background-color: transparent;
+        float: right;
+        margin-right: 3px;
+        margin-top: 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+    }
+}
+.search-box{
+    padding-top: 17px;
+    padding-left: 15px;
+    float: left;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+
+
+
+}
+.topbar {
+    position: relative;
+    width: auto; /* Ensures the topbar spans the full width of its parent */
+    list-style-type: none;
+    padding: 0px;
+    margin: -8px; /* Set margin to 0 to prevent unexpected spacing */
+    margin-top: -10px;
+    overflow:unset;
+    background-color: #d48104;
+    height: 70px;
+    top: 0;
+    /* Add any other necessary styles for your topbar */
+}
+#search-results {
+    border: #666;
+    position: absolute;
+    top: 100%;
+    left: 10;
+    background-color: #181818;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display:grid; /* Initially hidden */
+    z-index: 1;
+    width: 620px; /* Adjust width as needed */
+    max-height: 300px; /* Set maximum height for scrollability */
+    overflow-x:hidden; /* Enable vertical scrolling if needed */
+}
+.hide {
+    display: none;
+}
+
+/* Styles for individual search result cards */
+.search-card {
+    border-bottom: 1px solid #ddd;
+    height: 130px;
+    text-decoration: none;
+
+}
+.search-card:hover {
+    background-color: #302f2f;
+
+}
+/* Align image to the right */
+.search-card img {
+    width: 80px;
+    float: right!important;
+    margin: 5px;
+    margin-top: 10px;
+}
+.gridtext {
+    display: grid;
+    z-index: 1;
+
+
+
+}
+/* Styles for header of search result card */
+.card-header {
+    color: #d18108;
+    font-size: 16px;
+    font-weight: bold;
+    direction: rtl; /* Set the text direction to right-to-left */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for truncated text */
+
+}
+
+/* Styles for body of search result card */
+.card-body {
+    font-size: 14px;
+    color: #c2c2c2;
+    direction: rtl; /* Set the text direction to right-to-left */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for truncated text */
+
+}
+
+
+/* main container */
+.main-container {
+
+    text-align: right;
+
+
+
+
+
+
+
+
+}
+/* section */
+.section {
+
+    font-family: 'Cairo', sans-serif;
+
+
+
+
+
+}
+.section h1{
+    font-family: 'Cairo', sans-serif;
+    font-size: x-large;
+
+
+
+
+
+}
+.section h2{
+    font-family: 'Cairo', sans-serif;
+    font-size: medium;
+
+}
+/* readlist container */
+
+.container_readlist {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+    justify-content: center;
+    height: auto;
+}
+
+/* For screens less than 950px */
+
+/* read card */
+.read_card {
+
+    width: 150px;
+
+
+ /* Let each card grow and shrink according to content */
+    margin-right: 20px; /* Add some spacing between cards */
+    /* Add any other styles for read cards */
+}
+
+
+.themetext {
+    color: rgb(255, 255, 255);
+
+
+
+
+}
+
+
+.read_card img{
+    float: left;
+    width: 150px;
+    border-radius: 5px;
+
+}
+.h2space h2{
+    font-family: 'Cairo', sans-serif;
+    font-size: medium;
+    color: #d48104;
+    text-align: center;
+    text-decoration: none !important; /* Override any other text decoration */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Display an ellipsis (...) if text overflows */
+    direction: rtl; /* Set text direction to right-to-left for Arabic text */
+
+}
+.read_card h2 {
+    font-family: 'Cairo', sans-serif;
+    font-size: medium;
+    color:#d48104;
+    text-align: center;
+    text-decoration: none !important; /* Override any other text decoration */
+}
+
+.read_card a {
+    text-decoration: none !important; /* Override any other text decoration for anchor tags */
+    position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, auto); /* Add column value */
+}
+
+
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+/* main container 2 */
+.main-container2 {
+    position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, auto); /* Add column value */
+}
+
+.main-container2 > h1 {
+    margin-left: auto; /* Align the h1 tag to the right */
+    font-family: 'Cairo', sans-serif;
+    font-size: x-large;
+}
+
+/* section 2 */
+.section2 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 15px; /* Adjust the gap between columns */
+    row-gap: 10px;
+    max-width: 1100px;
+}
+
+
+.section2 > * {
+    margin-right: 2px; /* Adjust the margin between grid items */
+}
+
+
+/* read card 2 */
+.read_card2 {
+    float: left;
+    width: 300px;
+    height: 180px;
+    padding: 0px 0px 20px 0px;
+    position: relative;
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: 2px;
+    background-color: transparent;
+    backface-visibility: hidden;
+    transition: transform 0.3s; /* Add a transition for the transform property */
+}
+.read_card2:hover {
+    transform: scale(1.01);
+
+}
+
+.read_card2 img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 135px; /* Adjusted width for the image */
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-right: 4px;
+}
+
+.read_card2 .read_card2_title {
+    color: #d48104;
+    text-decoration: none;
+    font-family: 'Cairo', sans-serif;
+    font-size: medium;
+    margin: 0; /* Remove default margin */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid  rgb(165, 165, 165); /* Border under the title */
+    padding-bottom: 5px; /* Add some space between title and last chapter */
+    width: calc(50% - 0px); /* Adjusted width for the title */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for truncated text */
+}
+
+.read_card2 .read_card2_last_chapter,
+.read_card2 .read_card2_time {
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-size: 15px;
+    margin: 0; /* Remove default margin */
+    position: absolute;
+    top: 40%;
+    left: 0; /* Set left to 0 to align it with the left edge of the card */
+    transform: translateY(-50%);
+    width: calc(55% - 4px); /* Adjusted width for the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for truncated text */
+}
+
+
+
+.read_card2 .read_card2_time {
+    top: calc(50% + 10px); /* Position below last chapter */
+
+}
+
+
+
+
+
+.read_card2 .read_card2_title,
+.read_card2 .read_card2_last_chapter,
+.read_card2 .read_card2_time {
+    direction: rtl; /* Set the text direction to right-to-left */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for truncated text */
+}
+
+/* more */
+.more-container {
+    display: block; /* Ensures the entire container is clickable */
+    text-decoration: none; /* Removes the default underline for links */
+}
+
+.more {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 151, 245);
+    border-radius: 5px;
+}
+
+.more img {
+    max-height: 60%;
+    max-width: 60%;
+    margin-right: 10px; /* Adjust the spacing between image and text */
+}
+
+.more p {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    color: #fff;
+    font-size: large;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: auto;
+    font-family: 'Cairo', sans-serif;
+    font-size: x-large;
+    margin-top: 20px; /* Add this line to remove the top margin */
+    margin-bottom: -8px; /* Add this line to remove the bottom margin */
+    bottom: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.copyright h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+.big-container{
+    position:relative;
+
+
+}
+
+/* Set scrollbar color */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent background for the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d48104; /* Color of the scrollbar handle */
+    border: 0.1px solid black; /* Black border around the scrollbar handle */
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b36600; /* Adjusted color of the scrollbar handle on hover */
+}
+
+/* Remove scrollbar container */
+::-webkit-scrollbar-corner {
+    background: transparent; /* Make the scrollbar corner transparent */
+}
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .section2 {
+        grid-template-columns: repeat(2, 1fr); /* Change to two columns when width is less than 1000px */
+    }
+    #search-box {
+        padding-left: 10px;
+        font-family: 'Cairo', sans-serif;
+        float: left;
+        width: 200px;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        align-self: center;
+        font-size: medium;
+    }
+    #search-results {
+        border: #666;
+        position: absolute;
+        top: 100%;
+        left: 10;
+        background-color: #181818;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        display:grid; /* Initially hidden */
+        z-index: 1;
+        width: 400px; /* Adjust width as needed */
+        max-height: 300px; /* Set maximum height for scrollability */
+        overflow-x:hidden; /* Enable vertical scrolling if needed */
+    }
+}
+
+
+
+@media (max-width: 650px) {
+    .section2 {
+        grid-template-columns: repeat(1, 1fr); /* Change to two columns when width is less than 1000px */
+    }
+    .read_card2 {
+        float: left;
+        min-width: none;
+        height: 180px;
+        position: relative;
+        border: 2px solid rgb(165, 165, 165);
+        border-radius: 2px;
+        background-color: transparent;
+        backface-visibility: hidden;
+        transition: transform 0.3s; /* Add a transition for the transform property */
+    }
+}
+
+@media (max-width: 510px) {
+    #search-box {
+        padding-left: 10px;
+        font-family: 'Cairo', sans-serif;
+        float: left;
+        width: 100px;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        align-self: center;
+        font-size: medium;
+    }
+    .topbar img{
+        padding-left: 5px;
+        padding-top: -0px;
+        float: left;
+        overflow: hidden;
+        display: block;
+        width: 70px;
+
+    }
+    #search-results {
+        border: #666;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #181818;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        display:grid; /* Initially hidden */
+        z-index: 1;
+        width: auto; /* Adjust width as needed */
+        max-height: 300px; /* Set maximum height for scrollability */
+        overflow-x:hidden; /* Enable vertical scrolling if needed */
+    }
+    /* Styles for header of search result card */
+    .card-header {
+        color: #d18108;
+        font-size: 16px;
+        font-weight: bold;
+        direction: rtl; /* Set the text direction to right-to-left */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Display ellipsis for truncated text */
+
+    }
+
+    /* Styles for body of search result card */
+    .card-body {
+        font-size: 14px;
+        color: #c2c2c2;
+        direction: rtl; /* Set the text direction to right-to-left */
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Display ellipsis for truncated text */
+
+    }
+
+}

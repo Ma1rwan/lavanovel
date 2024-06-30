@@ -1,0 +1,903 @@
+@import url('https://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap');
+body {
+
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+    background-color: #181818;
+}
+/* top bar */
+
+.topbar img {
+    padding-left: 15px;
+    padding-top: 0; /* Remove negative padding */
+    float: left;
+    overflow: hidden;
+    display: block;
+    width: 70px;
+}
+
+.topbar .theme {
+    background-image: url(https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/main/white.png);
+    background-size: cover;
+    width: 37px; /* Adjust width as needed */
+    height: 37px; /* Adjust height as needed */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    background-color: transparent;
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+}
+
+.topbar .theme:hover {
+    background-color: #ffffff1a;
+}
+
+.topbar .theme:active {
+    transform: scale(0.95); /* Scale down the button slightly when clicked */
+}
+
+.topbar p {
+    padding-right: 20px;
+    padding-top: 4px;
+    font-family: 'Cairo', sans-serif;
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#search-box {
+    padding-left: 10px;
+    font-family: 'Cairo', sans-serif;
+    float: left;
+    width: 600px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-self: center;
+    font-size: medium;
+}
+
+.sidebar-toggle {
+    margin-top: 15px; /* Adjust the margin to align with other elements */
+    float: right;
+    display: none;
+}
+
+#sidebarButton {
+    background-color: #18181800;
+    border: #18181800;
+    font-size: 40px;
+    color: #fff;
+    margin-top: -10px;
+}
+.sidebar2 {
+    position: fixed;
+    top: 0px;
+    right: -250px; /* Hide sidebar by default */
+    width: 200px;
+    height: 100%;
+    background-color:  #181818;
+    color: #d48104;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    align-items: center;
+    border: #181818 1px solid;
+    border-left: #3f3f3f 2px solid;
+}
+.sidebar2 a {
+    text-decoration: none;
+}
+.sidebar2 p {
+    padding-right: 20px;
+    padding-top: 4px;
+    font-family: 'Cairo', sans-serif;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 5px 0px 5px 0px;
+    background-color:  #00000021;
+    font-size: larger;
+    border-top: #d48104 2px solid;
+}
+.sidebar2 p:hover {
+    transform: scale(1.02);
+    background-color:#ffffff11;
+    transition: transform 0.1s; /* Add a transition for the transform property */
+
+}
+.sidebar2.active {
+    right: 0; /* Show sidebar when active class is applied */
+}
+
+/* Other styles for your page */
+/* Add your styles here */
+@media screen and (max-width: 1120px) {
+    #search-box {
+        padding-left: 10px;
+        font-family: 'Cairo', sans-serif;
+        float: left;
+        width: auto;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        align-self: center;
+        font-size: medium;
+    }
+    .sidebar-toggle {
+        margin-top: 15px; /* Adjust the margin to align with other elements */
+        float: right;
+        display: block;
+    }
+    .topbar p {
+        padding-right: 20px;
+        padding-top: 4px;
+        font-family: 'Cairo', sans-serif;
+        float: right;
+        display: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    .topbar .theme {
+        background-image: url(https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/main/white.png);
+        background-size: cover;
+        width: 37px; /* Adjust width as needed */
+        height: 37px; /* Adjust height as needed */
+        border: none; /* Remove default button border */
+        cursor: pointer;
+        background-color: transparent;
+        float: right;
+        margin-right: 3px;
+        margin-top: 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+    }
+}
+@media screen and (max-width: 1120px) {
+    #search-box {
+        padding-left: 10px;
+        font-family: 'Cairo', sans-serif;
+        float: left;
+        width: auto;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        align-self: center;
+        font-size: medium;
+    }
+}
+@media screen and (max-width: 720px) {
+    #search-box {
+        padding-left: 10px;
+        font-family: 'Cairo', sans-serif;
+        float: left;
+        width: 80px;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        align-self: center;
+        font-size: medium;
+    }
+}
+@media (max-width: 510px) {
+    #search-box {
+        padding-left: 10px;
+        font-family: 'Cairo', sans-serif;
+        float: left;
+        width: 100px;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        align-self: center;
+        font-size: medium;
+    }
+}
+.search-box{
+    padding-top: 17px;
+    padding-left: 15px;
+    float: left;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+
+
+
+}
+.topbar {
+    position: relative;
+    width: auto; /* Ensures the topbar spans the full width of its parent */
+    list-style-type: none;
+    padding: 0px;
+    margin: -8px; /* Set margin to 0 to prevent unexpected spacing */
+    margin-top: -10px;
+    overflow:unset;
+    background-color: #d48104;
+    height: 70px;
+    top: 0;
+    /* Add any other necessary styles for your topbar */
+}
+
+#search-results {
+    border: #666;
+    position: absolute;
+    top: 100%;
+    left: 10;
+    background-color: #181818;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display:grid; /* Initially hidden */
+    z-index: 1;
+    width: 620px; /* Adjust width as needed */
+    max-height: 300px; /* Set maximum height for scrollability */
+    overflow-x:hidden; /* Enable vertical scrolling if needed */
+}
+.hide {
+    display: none;
+}
+
+/* Styles for individual search result cards */
+.search-card {
+    border-bottom: 1px solid #ddd;
+    height: 130px;
+    text-decoration: none;
+
+}
+.search-card:hover {
+    background-color: #302f2f;
+
+}
+/* Align image to the right */
+.search-card img {
+    width: 80px;
+    float: right!important;
+    margin: 5px;
+    margin-top: 10px;
+}
+.gridtext {
+    display: grid;
+    z-index: 1;
+
+
+
+}
+/* Styles for header of search result card */
+.card-header {
+    color: #d18108;
+    font-size: 16px;
+    font-weight: bold;
+    direction: rtl; /* Set the text direction to right-to-left */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for truncated text */
+
+}
+
+/* Styles for body of search result card */
+.card-body {
+    font-size: 14px;
+    color: #c2c2c2;
+    direction: rtl; /* Set the text direction to right-to-left */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Display ellipsis for truncated text */
+
+}
+
+
+/* search box */
+
+
+#clear-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px; /* Adjust button width as needed */
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.themetext {
+    color: rgb(255, 255, 255);
+}
+
+/* header container */
+.header-container {
+    display: flex;
+    min-height: 500px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.info-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.img-container {
+    width: 35%;
+}
+
+/* header content */
+
+.img-container img {
+    width: 210px;
+    border-radius: 5px;
+    padding: 25px 0px 0px 5px;
+
+}
+
+.noveltitle {
+    padding-right: 10px;
+    color: #d48104;
+    font-family: 'Cairo', sans-serif;
+}
+.info-container p {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    padding-right: 10px;
+    font-size: large;
+}
+
+.info-container > * {
+    margin-bottom: 10px; /* Adjust as needed for spacing between content items */
+}
+
+.grouptype {
+    /* Assuming .grouptype is a flex container to stack items vertically */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: flex-end; /* Align items to the end of the container */
+}
+
+.grouptype span {
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-family: 'Cairo', sans-serif;
+    margin-right: 10px; /* Spacing between horizontally stacked items */
+    margin-bottom: 20px; /* Increased gap between vertically stacked items */
+    font-size: larger;
+    background-color: #d48104;
+    color: #ffffff;
+}
+
+
+.chapters {
+    margin: 0px 100px 0px 100px;
+    height: fit-content;
+}
+.chapters .newest {
+    width: auto;
+    height:30px;
+    height: 50px;
+
+
+
+
+}
+
+.newest span{
+    font-family: 'Cairo', sans-serif;
+    float: right;
+    margin-right: 10px;
+    font-size: larger;
+    margin-top: 8px;
+
+}
+.newest .updown{
+    background-image: url(https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/main/arrowblack.png);
+    background-size: cover;
+    width: 20px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+
+}
+.chapters .chapter{
+
+    border-bottom: solid rgb(109, 109, 109) 1px;
+}
+.chapter a{
+    text-decoration: none;
+}
+
+.chapter .chapter-time,
+.chapter .chapter-name,
+.chapter .chapter-number
+{
+    font-family: 'Cairo', sans-serif;
+    font-size: larger;
+
+}
+
+
+.chapter {
+    height: 50px;
+}
+.chapter:hover {
+    background-color: #7a7a7a1c;
+    transform: scale(1.003);
+}
+
+.chapter a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.chapter-time {
+    margin-right: auto; /* Pushes it to the right edge */
+    margin-left: 5px;
+}
+
+.chapter-name {
+    margin-right: 30px;
+    direction: rtl; /* Ensure Arabic text starts from the right */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.chapter-number {
+    margin-right: 5px;
+
+}
+
+.chapter .chapter-time,
+.chapter .chapter-number
+{
+    background-color: #d48104;
+    padding: 0px 25px 0px 25px;
+    border-radius: 5px;
+    color: white;
+
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: auto;
+    font-family: 'Cairo', sans-serif;
+    font-size: x-large;
+    margin-top: auto;
+    margin-left: -10px;
+    margin-right:-8px;
+    margin-bottom: -8px;
+
+}
+.copyright h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.chapter-header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    height: auto;
+    width: 1000px;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: flex-start; /* Align items to the top */
+    position: relative; /* Set container as relative for absolute positioning */
+    border-radius: 5px;
+    border: #5a5a5a solid 1px;
+}
+
+.chapter-header h1,
+.chapter-header h2,
+.chapter-paragraph {
+    font-family: 'Cairo', sans-serif;
+    font-size: large;
+    direction: rtl;
+    font-weight:300;
+}
+.chapter-header a {
+    text-decoration: none;
+}
+.chapter-header h1 {
+    font-size: 25px;
+    top: -15px; /* 15px from the top */
+    right: 10px; /* 10px from the right */
+    position: relative;
+    color: #d48104;
+}
+
+.chapter-header h2 {
+    font-size: large;
+    top: -40px; /* 35px (15px + 20px margin) from the top */
+    right: 10px; /* 10px from the right */
+    position: relative;
+    color: rgb(197, 196, 196);
+}
+.settings-header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height: 45px;
+    width: 1000px;
+    position: relative; /* Set container as relative for absolute positioning */
+    border-radius: 5px;
+    border: #5a5a5a solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.settings-header span{
+    font-family: 'Cairo', sans-serif;
+    font-weight:bolder;
+}
+
+.settingsimg {
+
+    background-image: url(https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/main/settingswhite.png);
+    background-size: cover;
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+
+
+}
+.chapter-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1000px;
+    position: relative; /* Set container as relative for absolute positioning */
+    border-radius: 5px;
+    border: #5a5a5a solid 1px;
+
+
+}
+
+.bodycontainer {
+    position: relative;
+    margin-top: 10px;
+}
+
+
+
+.chapter-paragraph .pad {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1020px) {
+    .chapter-header {
+        width: auto;
+
+    }
+    .settings-header {
+        width: auto;
+    }
+    .chapter-paragraph {
+        width: auto;
+
+    }
+
+
+    .img-container img {
+        width: 180px;
+
+    }
+    .grouptype span {
+        padding: 2px 10px 2px 10px;
+        border-radius: 5px;
+        font-family: 'Cairo', sans-serif;
+        margin-right: 5px;
+        font-size: large;
+        background-color:#d48104;
+        color: #ffffff;
+
+
+
+    }
+    .info-container p {
+        font-size: 80%;
+
+    }
+
+    .chapters {
+        margin: 0px;
+        height: fit-content;
+        width: auto;
+    }
+
+    .chapter-time {
+        margin-right: auto; /* Pushes it to the right edge */
+        margin-left: 2px;
+    }
+
+    .chapter-name {
+        margin-right: 10px;
+        direction: rtl; /* Ensure Arabic text starts from the right */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+    }
+
+    .chapter-number {
+        margin-right: 2px;
+
+    }
+    .chapter .chapter-time,
+    .chapter .chapter-number
+    {
+        background-color: #d48104;
+        padding: 0px 20px 0px 20px;
+        border-radius: 5px;
+        color: white;
+
+    }
+    .chapter .chapter-time,
+    .chapter .chapter-name,
+    .chapter .chapter-number
+    {
+        font-family: 'Cairo', sans-serif;
+        font-size: large;
+
+    }
+
+    #search-results {
+        border: #666;
+        position: absolute;
+        top: 100%;
+        left: 10;
+        background-color: #181818;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        display:grid; /* Initially hidden */
+        z-index: 1;
+        width: 400px; /* Adjust width as needed */
+        max-height: 300px; /* Set maximum height for scrollability */
+        overflow-x:hidden; /* Enable vertical scrolling if needed */
+    }
+
+    .nextskipcontainer {
+        display: flex;
+        justify-content: space-between; /* Align items to the left and right */
+        max-width: 900px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .header-container {
+        display:grid;
+        min-height: 400px;
+
+    }
+
+    .info-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        order: 2;
+    }
+    .img-container {
+        width: 100%;
+        order: 1;
+        position: relative;
+    }
+    .img-container img {
+        display: block; /* Ensures the image is treated as a block element */
+        margin: 0 auto; /* Automatically sets equal margin on both sides, effectively centering the image */
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .noveltitle {
+        font-size: 25px;
+        align-self: center;
+    }
+    .grouptype span{
+        margin: 5px;
+    }
+    .description{
+        height: fit-content;
+    }
+
+}
+
+
+/* Set scrollbar color */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent background for the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d48104; /* Color of the scrollbar handle */
+    border: 0.1px solid black; /* Black border around the scrollbar handle */
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b36600; /* Adjusted color of the scrollbar handle on hover */
+}
+
+/* Remove scrollbar container */
+::-webkit-scrollbar-corner {
+    background: transparent; /* Make the scrollbar corner transparent */
+}
+
+@media (max-width: 510px) {
+
+    .topbar img{
+        padding-left: 5px;
+        padding-top: -0px;
+        float: left;
+        overflow: hidden;
+        display: block;
+        width: 70px;
+
+    }
+    #search-results {
+        border: #666;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #181818;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        display:grid; /* Initially hidden */
+        z-index: 1;
+        width: auto; /* Adjust width as needed */
+        max-height: 300px; /* Set maximum height for scrollability */
+        overflow-x:hidden; /* Enable vertical scrolling if needed */
+    }
+    /* Styles for header of search result card */
+    .card-header {
+        color: #d18108;
+        font-size: 16px;
+        font-weight: bold;
+        direction: rtl; /* Set the text direction to right-to-left */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Display ellipsis for truncated text */
+
+    }
+
+    /* Styles for body of search result card */
+    .card-body {
+        font-size: 14px;
+        color: #c2c2c2;
+        direction: rtl; /* Set the text direction to right-to-left */
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Display ellipsis for truncated text */
+
+    }
+
+}
+
+.nextskipcontainer {
+    display: flex;
+    justify-content:space-between; /* Align items to the left and right */
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nextskipcontainer .next-btn,
+.nextskipcontainer .skip-btn {
+    background-color:#d48104 ;
+    font-family: 'Cairo', sans-serif;
+    border: none;
+    color: white;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+.nextskipcontainer .skip-btn {
+    margin-left: 300px;
+
+}
+@media screen and (max-width: 500px) {
+    .nextskipcontainer .skip-btn {
+        margin-left: 100px;
+
+    }
+}
+
+
+.first-container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: flex-start; /* Align items to the top */
+    padding: 0px; /* Add padding to create space from the edges */
+    position: relative; /* Required for absolute positioning of the search box */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 120px;
+}
+
+.first-container h1 {
+    font-family: 'Cairo', sans-serif;
+    margin-right: 20px; /* Add margin to create space between the image and the heading */
+}
+
+.first-container img {
+    width: 50px;
+    height: 50px;
+    top: 50px; /* Position the image 10px from the top */
+    right: 10px; /* Position the image 10px from the right */
+    padding-top: 30px;
+}
+.second-container {
+    padding-right: 9.9%;
+
+
+}
+
+/* Search box */
+
+
+.search-box2 {
+    padding-left: 10px;
+    font-family: 'Cairo', sans-serif;
+    float: left;
+    width: 100%;
+    border: 3px solid #70706e;
+    border-radius: 5px;
+    align-self: center;
+    font-size: medium;
+    background-color: #bb853300;
+    margin-bottom: 10px;
+}
+/* -------------------------------*/

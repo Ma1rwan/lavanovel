@@ -139,7 +139,7 @@ function loadContent() {
             const novel = parts[2];
 
             // Display dynamic content based on name only
-            fetchAndSetContent('novel.html');
+            fetchAndSetContent('pages/novel.html');
 
             setNovel(novel);
         } else if (parts.length === 4 && parts[0] === '' && parts[1] === 'novel' && parts[3] !== '') {
@@ -147,7 +147,7 @@ function loadContent() {
             const chapter = parts[3];
 
             // Display dynamic content based on name and age
-            fetchAndSetContent('chapter.html');
+            fetchAndSetContent('pages/chapter.html');
             setChapter(novel, chapter);
         } else {
             notFound();
@@ -174,8 +174,8 @@ function loadContent() {
 
 // Function to fetch and set HTML content for Home page
 async function home() {
-    fetchAndSetContent('home.html');
-    const styleFile = "style.css"
+    fetchAndSetContent('pages/home.html');
+    const styleFile = "css/style.css"
     const stylesheet = document.getElementById("stylesheet");
     stylesheet.href = styleFile;
 
@@ -265,10 +265,10 @@ async function home() {
 
 // Function to fetch and set HTML content for About page
 async function library(page) {
-    const styleFile = "library.css"
+    const styleFile = "css/library.css"
     const stylesheet = document.getElementById("stylesheet");
     stylesheet.href = styleFile;
-    fetchAndSetContent('library.html');
+    fetchAndSetContent('pages/library.html');
 
     try {
 
@@ -426,27 +426,27 @@ async function library(page) {
 
 // Function to fetch and set HTML content for Contact page
 function privacy() {
-    const styleFile = "novel&chap.css"
+    const styleFile = "css/novel&chap.css"
     const stylesheet = document.getElementById("stylesheet");
     stylesheet.href = styleFile;
-    fetchAndSetContent('privacy.html');
+    fetchAndSetContent('pages/privacy.html');
     themeOnStart();
 
 }
 function notFound() {
-    const styleFile = "404.css"
+    const styleFile = "css/404.css"
     const stylesheet = document.getElementById("stylesheet");
     stylesheet.href = styleFile;
     const error = new Error("Page not found.")
     console.error(error);
-    fetchAndSetContent('404.html');
+    fetchAndSetContent('pages/404.html');
     themeOnStart();
 
 }
 
 // Function to fetch and set HTML content for Hello page with name only
 async function setNovel(novel) {
-    const styleFile = "novel&chap.css"
+    const styleFile = "css/novel&chap.css"
     const stylesheet = document.getElementById("stylesheet");
     stylesheet.href = styleFile;
    
@@ -529,7 +529,7 @@ async function setNovel(novel) {
     }
 // Function to fetch and set HTML content for Hello page with name and age
 async function setChapter(novel, chapter) {
-    const styleFile = "novel&chap.css"
+    const styleFile = "css/novel&chap.css"
     const stylesheet = document.getElementById("stylesheet");
     stylesheet.href = styleFile;
     

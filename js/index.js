@@ -255,6 +255,16 @@ async function home() {
                   fifth7header.appendChild(novelCard);
               }
           }
+          document.querySelector('meta[property="og:title"]').setAttribute('content', 'LAVAnovel - Home');
+
+          // Change the og:description meta tag
+          document.querySelector('meta[property="og:description"]').setAttribute('content', 'ترحب بكم موقع لافانوفيل، المكان الذي تجتمع فيه القصص الشيقة والروايات الرائعة. حيث يمكنكم الانغماس في عوالم الخيال والمغامرات بكل سهولة وراحة. اكتشفوا مجموعة واسعة من الروايات المثيرة، وتمتعوا بتجارب قراءة فريدة تنقلكم إلى عوالم لا متناهية من الإثارة والتشويق. مع لافانوفيل، ابدأوا مغامرتكم القرائية اليوم وتعرفوا على أعمال جديدة ومثيرة في كل مرة تزورون فيها موقعنا.');
+  
+          // Change the og:image meta tag
+          document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/dcca9c81b2d1e3f7f90eb2b721507e2887d410ba/logo.png');
+          document.title = 'LAVAnovel - Home'
+          // Log the changes to verify
+
       } catch (error) {
           console.error('Error in homePage:', error);
           notFound();
@@ -412,15 +422,23 @@ async function library(page) {
         }else{
             notFound();
         }
-        
+        document.querySelector('meta[property="og:title"]').setAttribute('content', 'LAVAnovel - Library');
+
+        // Change the og:description meta tag
+        document.querySelector('meta[property="og:description"]').setAttribute('content', 'ترحب بكم موقع لافانوفيل، المكان الذي تجتمع فيه القصص الشيقة والروايات الرائعة. حيث يمكنكم الانغماس في عوالم الخيال والمغامرات بكل سهولة وراحة. اكتشفوا مجموعة واسعة من الروايات المثيرة، وتمتعوا بتجارب قراءة فريدة تنقلكم إلى عوالم لا متناهية من الإثارة والتشويق. مع لافانوفيل، ابدأوا مغامرتكم القرائية اليوم وتعرفوا على أعمال جديدة ومثيرة في كل مرة تزورون فيها موقعنا.');
+
+        // Change the og:image meta tag
+        document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/dcca9c81b2d1e3f7f90eb2b721507e2887d410ba/logo.png');
+
+
+        document.title = 'LAVAnovel - Library'
 
         }catch (error) {
             notFound();
             console.error(error);
         }
         themeOnStart();
-
-
+       
 
 }
 
@@ -431,6 +449,15 @@ function privacy() {
     stylesheet.href = styleFile;
     fetchAndSetContent('pages/privacy.html');
     themeOnStart();
+    document.title = 'LAVAnovel - Privacy'
+
+    document.querySelector('meta[property="og:title"]').setAttribute('content', 'LAVAnovel - Privacy');
+
+    // Change the og:description meta tag
+    document.querySelector('meta[property="og:description"]').setAttribute('content', 'ترحب بكم موقع لافانوفيل، المكان الذي تجتمع فيه القصص الشيقة والروايات الرائعة. حيث يمكنكم الانغماس في عوالم الخيال والمغامرات بكل سهولة وراحة. اكتشفوا مجموعة واسعة من الروايات المثيرة، وتمتعوا بتجارب قراءة فريدة تنقلكم إلى عوالم لا متناهية من الإثارة والتشويق. مع لافانوفيل، ابدأوا مغامرتكم القرائية اليوم وتعرفوا على أعمال جديدة ومثيرة في كل مرة تزورون فيها موقعنا.');
+        // Change the og:image meta tag
+    document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/dcca9c81b2d1e3f7f90eb2b721507e2887d410ba/logo.png');
+
 
 }
 function notFound() {
@@ -441,6 +468,16 @@ function notFound() {
     console.error(error);
     fetchAndSetContent('pages/404.html');
     themeOnStart();
+    document.title = 'LAVAnovel'
+
+    document.querySelector('meta[property="og:title"]').setAttribute('content', 'LAVAnovel');
+
+    // Change the og:description meta tag
+    document.querySelector('meta[property="og:description"]').setAttribute('content', 'ترحب بكم موقع لافانوفيل، المكان الذي تجتمع فيه القصص الشيقة والروايات الرائعة. حيث يمكنكم الانغماس في عوالم الخيال والمغامرات بكل سهولة وراحة. اكتشفوا مجموعة واسعة من الروايات المثيرة، وتمتعوا بتجارب قراءة فريدة تنقلكم إلى عوالم لا متناهية من الإثارة والتشويق. مع لافانوفيل، ابدأوا مغامرتكم القرائية اليوم وتعرفوا على أعمال جديدة ومثيرة في كل مرة تزورون فيها موقعنا.');
+
+    // Change the og:image meta tag
+    document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://raw.githubusercontent.com/Ma1rwan/lavanovelPictures/dcca9c81b2d1e3f7f90eb2b721507e2887d410ba/logo.png');
+
 
 }
 
@@ -510,8 +547,15 @@ async function setNovel(novel) {
 
                 
             }
-            const updown = document.getElementById("updown");
-            updown.addEventListener('click', console.log(":"));
+        document.title = `LAVAnovel - ${arabic_Title}`
+
+        document.querySelector('meta[property="og:title"]').setAttribute('content', `LAVAnovel - ${arabic_Title}`);
+
+        // Change the og:description meta tag
+        document.querySelector('meta[property="og:description"]').setAttribute('content', `${description}`);
+
+        // Change the og:image meta tag
+        document.querySelector('meta[property="og:image"]').setAttribute('content', `${image}`);
         
         }else{
             notFound();
@@ -523,8 +567,9 @@ async function setNovel(novel) {
         }
         themeOnStart();
         const upDown = document.getElementById("updown");
-        updown.addEventListener('click', rearrangeChapters);
+        upDown.addEventListener('click', rearrangeChapters);
         
+
 
     }
 // Function to fetch and set HTML content for Hello page with name and age
@@ -589,7 +634,15 @@ async function setChapter(novel, chapter) {
                 }
                
             }
-            
+        document.title = `LAVAnovel - ${arabic_Title}`
+
+        document.querySelector('meta[property="og:title"]').setAttribute('content', `LAVAnovel - ${arabic_Title}`);
+
+        // Change the og:description meta tag
+        document.querySelector('meta[property="og:description"]').setAttribute('content', `${description}`);
+
+        // Change the og:image meta tag
+        document.querySelector('meta[property="og:image"]').setAttribute('content', `${image}`);
         }
             
         }else{
@@ -601,6 +654,7 @@ async function setChapter(novel, chapter) {
             notFound();
         }
         themeOnStart();
+        
 
 }
 
